@@ -12,4 +12,4 @@ Welche Auswirkungen hat _remote working_ auf die Work-Life-Balance von Arbeitneh
 ### 3. Faktorenraum
 
 
-![Bild](file:///Users/Julia/Desktop/Untitled%20Diagram.jpeg.html)
+![Bild](https://i.ibb.co/TYH8nZP/worklifebalance.png" alt="worklifebalance" border="0"></a>)
