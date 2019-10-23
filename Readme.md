@@ -10,3 +10,5 @@ Julia Dahmen, Susanna Formanns, Kevin Klein,Theresa Laubauch, Lukas Steinke, Fre
 Welche Auswirkungen hat _remote working_ auf die Work-Life-Balance von Arbeitnehmern?
 
 ### 3. Faktorenraum
+
+![](C:\Users\freya\Pictures\worklifebalance.png)
