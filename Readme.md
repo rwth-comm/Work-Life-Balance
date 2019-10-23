@@ -3,7 +3,7 @@ Work-Life-Balance
   
 ### 1. Teammitglieder 
 
-Julia Dahmen, Susanna Formanns, Kevin Klein,Theresa Laubauch, Lukas Steinke, Freya Wolters
+Julia Dahmen, Susanna Formanns, Kevin Klein, Theresa Laubauch, Lukas Steinke, Freya Wolters
 
 ### 2. Forschungsfrage 
 
