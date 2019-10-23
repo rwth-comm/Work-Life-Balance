@@ -12,9 +12,4 @@ Welche Auswirkungen hat _remote working_ auf die Work-Life-Balance von Arbeitneh
 ### 3. Faktorenraum
 
 
-Zwei mal drei macht `r 2 * 3` widewidewitt und drei macht neune.
-
-
-
-
-![Bild](C:\Users\Uni\Pictures\test.png)
+![Bild](https://ibb.co/JmHZ3pX)
