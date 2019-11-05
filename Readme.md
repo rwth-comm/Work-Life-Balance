@@ -3,12 +3,13 @@ Work-Life-Balance
   
 ### 1. Teammitglieder 
 
-Julia Dahmen, Susanna Formanns, Kevin Klein,Theresa Laubauch, Lukas Steinke, Freya Wolters
+Julia Dahmen, Susanna Formanns, Kevin Klein, Theresa Laubauch, Lukas Steinke, Freya Wolters
 
 ### 2. Forschungsfrage 
 
-Welche Auswirkungen hat _remote working_ auf die Work-Life-Balance von Arbeitnehmern?
+Welche Nutzerfaktoren beeinflussen den _switch-off_ bei Arbeitnehmern, die Telework praktizieren?
+
 
 ### 3. Faktorenraum
 
-![](C:\Users\freya\Pictures\worklifebalance.png)
+=======
