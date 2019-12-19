@@ -179,6 +179,6 @@ raw.short$ikt_help_trust_5 <- ordered(raw.short$ikt_help_trust_5, levels = scale
 raw.short$ikt_help_trust_6 <- ordered(raw.short$ikt_help_trust_6, levels = scale.zustimmung6)
 raw.short$ikt_help_trust_7 <- ordered(raw.short$ikt_help_trust_7, levels = scale.zustimmung6)
 
-
+## JRH: Sieht ganz gut aus, aber ich würde Ihnen empfehlen das nicht als Markdown zu machen sondern als normales Script. Über die Skalenberechnung schauen wir morgen. 
 
 ```
