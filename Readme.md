@@ -26,31 +26,35 @@ Zur Klärung der Frage, welche Nutzerfaktoren den _switch-off_ bei Arbeitnehmern
 ### Hypothesen
 #### Hypothese 1
 
-* Hypothese: Mitarbeiter mit geringerer Arbeitsintensität weisen einen höheren switch-off auf.
-* Verfahren:
+* Hypothese: Mitarbeiter mit geringerer Arbeitsintensität weisen einen besseren switch-off auf.
+* Verfahren: T-Test
 * H0: Mitarbeiter mit geringerer Arbeitsintensität und Mitarbeiter mit höherer Arbeitsintensität unterscheiden sich nicht im switch-off.
 * H1: Mitarbeiter mit geringerer Arbeitsintensität und Mitarbeiter mit höherer Arbeitsintensität unterscheiden sich im switch-off.
 
 #### Hypothese 2
-* Hypothese: Mitarbeiter, die mit ihren Arbeitszeiten zufrieden sind, weisen einen höheren switch-off auf.
-* Verfahren:
+* Hypothese: Mitarbeiter, die mit ihren Arbeitszeiten zufrieden sind, weisen einen besseren switch-off auf.
+* Verfahren: T-Test
 * H0: Mitarbeiter, die zufrieden mit ihren Arbeitszeiten sind und die, die unzufrieden mit ihren Arbeitszeiten sind, unterscheiden sich nicht im switch-off.
 * H1: Mitarbeiter, die zufrieden mit ihren Arbeitszeiten sind und die, die unzufrieden mit ihren Arbeitszeiten sind, unterscheiden sich nicht im switch-off.
 
 #### Hypothese 3
-* Hypothese: Mitarbeiter, die ihre Arbeitszeit frei einteilen können, haben einen niedrigeren switch-off auf
-* Verfahren:
-* H0: Mitarbeiter, die ihre Arbeitszeit frei einteilen können und diese, die ihre Arbeitszeit nicht frei einteilen können, unterscheiden sich nicht im switch-off.
-* H1: Mitarbeiter, die ihre Arbeitszeit frei einteilen können und diese, die ihre Arbeitszeit nicht frei einteilen können, unterscheiden sich im switch-off.
+* Hypothese: Mitarbeiter in Führungspositionen weisen einen schlechteren switch-off auf.
+* Verfahren: three-way ANOVA
+* H0: Das Beschäftigungsverhältnis hat keinen Einfluss auf den Switch-Off.
+* H1: Das Beschäftigungsverhältnis hat einen Einfluss auf den Switch-Off.
 
 #### Hypothese 4
-* Hypothese: Mitarbeiter, die genau oder mehr als 3 Tage in der Woche nicht am Arbeitsplatz arbeiten, weisen einen niedrigeren switch-off auf.
-* Verfahren:
+* Hypothese: Mitarbeiter, die genau oder mehr als 3 Tage in der Woche nicht am Arbeitsplatz arbeiten, weisen einen schlechteren switch-off auf.
+* Verfahren: T-Test
 * H0: Der switch-off hängt nicht von der Anzahl der Tage in der Woche ab, die Mitarbeiter nicht am Arbeitsplatz verbringen.
 * H1: Der switch-off hängt von der Anzahl der Tage in der Woche ab, die Mitarbeiter nicht am Arbeitsplatz verbringen.
 
 #### Hypothese 5:
-* Hypothese:
-* Verfahren:
-* H0:
-* H1:
+* Hypothese: Mitarbeiter, die flexibel in ihrem Job sind, weisen einen besseren Switch-off und eine höhere allgemeine Zufriedenheit auf.
+
+UV Flexibilität
+AV Switch-Off, Zufriedenheit
+
+* Verfahren: one-way MANOVA
+* H0: Es gibt keinen Unterschied beim Switch-off und der allgemeinen Zufriedenheit in Bezug auf die Flexibilität im Job.
+* H1: Es gibt einen Unterschied beim Switch-off und der allgemeinen Zufriedenheit in Bezug auf die Flexibilität im Job.
