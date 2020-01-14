@@ -22,9 +22,10 @@ Zur Klärung der Frage, welche Nutzerfaktoren den _Switch-off_ bei Arbeitnehmern
 ![Faktorenraum](images/Faktorenraum.png)  
 
 ---
+###4.
 Die Faktoren, die uns im Team interessieren, sind die sozialen Interaktionen der Probanden, wie flexibel ihre Arbeitsbedigungen sind sowie ihre allgemeine Arbeitszufriedenheit.
 ---
-### 4. Unterschiedshypothesen:
+### 5. Unterschiedshypothesen:
 
 #### Hypothese 1
 * Hypothese: Mitarbeiter, die mit ihren Arbeitszeiten zufrieden sind, weisen einen besseren _Switch-off_ auf.
@@ -62,7 +63,7 @@ Die Faktoren, die uns im Team interessieren, sind die sozialen Interaktionen der
 
 ---
 
-### 5. Zusammenhangshypothesen
+### 6. Zusammenhangshypothesen
 
 #### Hypothese 1
 * Je höher die  Arbeitszufriedenheit, desto einfacher fällt der _Switch-off_.
