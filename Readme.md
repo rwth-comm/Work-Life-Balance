@@ -19,7 +19,7 @@ Zur Klärung der Frage, welche Nutzerfaktoren den _Switch-off_ bei Arbeitnehmern
 
 ---
 
-### Unterschiedshypothesen:
+### 4. Unterschiedshypothesen:
 #### Hypothese 1
 
 * Hypothese: Mitarbeiter mit geringerer Arbeitsintensität weisen einen besseren Switch-off auf.
@@ -71,7 +71,7 @@ Zur Klärung der Frage, welche Nutzerfaktoren den _Switch-off_ bei Arbeitnehmern
 
 ---
 
-### Zusammenhangshypothesen
+### 5. Zusammenhangshypothesen
 
 #### Hypothese 1
 * Je höher die  Arbeitszufriedenheit, desto einfacher fällt der Switch-off.
