@@ -23,7 +23,7 @@ Zur Klärung der Frage, welche Nutzerfaktoren den _Switch-off_ bei Arbeitnehmern
 
 ---
 
-<br><br>
+<br>
 
 ### 4. Gemeinsame Faktoren Team A
 
@@ -31,7 +31,7 @@ Die Faktoren, die uns im Team gemeinsam interessieren, sind die sozialen Interak
 
 ---
 
-<br><br>
+<br>
 
 ### 5. Unterschiedshypothesen:
 
@@ -71,7 +71,7 @@ Die Faktoren, die uns im Team gemeinsam interessieren, sind die sozialen Interak
 
 ---
 
-<br><br>
+<br>
 
 ### 6. Zusammenhangshypothesen
 
