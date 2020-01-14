@@ -23,8 +23,9 @@ Zur Klärung der Frage, welche Nutzerfaktoren den _Switch-off_ bei Arbeitnehmern
 
 ---
 
-### 4.
-Die Faktoren, die uns im Team interessieren, sind die sozialen Interaktionen der Probanden, wie flexibel ihre Arbeitsbedigungen sind sowie ihre allgemeine Arbeitszufriedenheit.
+### 4.Gemeinsame Faktoren Team A
+
+Die Faktoren, die uns im Team gemeinsam interessieren, sind die sozialen Interaktionen der Probanden, wie flexibel ihre Arbeitsbedigungen sind sowie ihre allgemeine Arbeitszufriedenheit.
 
 ---
 
