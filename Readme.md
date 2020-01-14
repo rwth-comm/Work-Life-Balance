@@ -36,6 +36,22 @@ Zur Klärung der Frage, welche Nutzerfaktoren den _Switch-off_ bei Arbeitnehmern
 #### Hypothese 3
 * Hypothese: Mitarbeiter in Führungspositionen weisen einen schlechteren Switch-off auf.
 * Verfahren: three-way ANOVA
+* Hypothese: Mitarbeiter mit geringerer Arbeitszeit und geringerer Arbeitsintensität weisen einen besseren switch-off auf.
+* Verfahren: one-way ANOVA
+* UV: Arbeitszeit, Arbeitsintensität
+* AV: switch-Off
+* H0: Es gibt keinen Unterschied beim Switch-Off in Bezug auf die Arbeitszeit und Arbeitsintensität.
+* H1: Es gibt einen Unterschied beim Switch-Off in Bezug auf die Arbeitszeit und Arbeitsintensität.
+
+#### Hypothese 2
+* Hypothese: Mitarbeiter, die länger im Unternehmen beschäftigt sind, weisen einen besseren switch-off auf.
+* Verfahren: T-Test
+* H0: Die Beschäftigungsdauer der Mitarbeiter hat keinen Einfluss auf den switch-off.
+* H1: Die Beschäftigungsdauer der Mitarbeiter hat einen Einfluss auf den switch-off.
+
+#### Hypothese 3
+* Hypothese: Mitarbeiter in Führungspositionen weisen einen schlechteren switch-off auf.
+* Verfahren: T-Test
 * H0: Das Beschäftigungsverhältnis hat keinen Einfluss auf den Switch-Off.
 * H1: Das Beschäftigungsverhältnis hat einen Einfluss auf den Switch-Off.
 
@@ -48,6 +64,8 @@ Zur Klärung der Frage, welche Nutzerfaktoren den _Switch-off_ bei Arbeitnehmern
 #### Hypothese 5:
 * Hypothese: Mitarbeiter, die flexibel in ihrem Job sind, weisen einen besseren Switch-off und eine höhere allgemeine Zufriedenheit auf.
 * Verfahren: one-way MANOVA
+* UV: Flexibilität
+* AV: switch-Off, Zufriedenheit
 * H0: Es gibt keinen Unterschied beim Switch-off und der allgemeinen Zufriedenheit in Bezug auf die Flexibilität im Job.
 * H1: Es gibt einen Unterschied beim Switch-off und der allgemeinen Zufriedenheit in Bezug auf die Flexibilität im Job.
 
