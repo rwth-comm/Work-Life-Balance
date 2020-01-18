@@ -124,6 +124,7 @@ schluesselliste <- list(SOFF = c("-feel_work_1", "-free_time_1", "-free_time_2",
 ## Merke für uns
 # SOFF = Switch-Off (1-6)
 # AZ = Arbeitszeit (keine Skalenberechnung)
+# AZZ = Arbeitszeit-Zufriedenheit
 # AI = Arbeitsintensität (1-6)
 # AD = Antellungsdauer (keine Skalenberechnung)
 # JOB = Art der Tätigkeit (keine Skalenberechnung -> Einteilung?)
@@ -134,9 +135,7 @@ schluesselliste <- list(SOFF = c("-feel_work_1", "-free_time_1", "-free_time_2",
 ## Hier werden die Skalen berechnet: 
 scores <- scoreItems(schluesselliste, raw.short, missing = TRUE, min = 1, max = 6)
 
-## Die errechneten Scores ATI, VBA usw. werden hinten als Spalten an raw.short angefügt:
-data <- bind_cols(raw.short, as_tibble(scores$scores))
 
-
-
+### questionr -> Addins -> für Median -> icut -> Quantile; Breaks = Anazhl der Gruppen 
+### ansonsten -> mutate(Datensatz = case_when(Bedingung))
 
