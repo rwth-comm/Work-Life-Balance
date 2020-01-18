@@ -17,6 +17,66 @@ Q43_3;Q43_3;Bei den folgenden Fragen geht es um die Art der Flexibilität ihres 
 Q43_4;Q43_4;Bei den folgenden Fragen geht es um die Art der Flexibilität ihres Berufes. - Einige Aufgaben meines Jobs darf ich an einem beliebigen Ort erfüllen, z.B. Zuhause oder in einem Coworking Café;"{""ImportId"":""QID117_4""}"
 Q43_5;Q43_5;Bei den folgenden Fragen geht es um die Art der Flexibilität ihres Berufes. - Ich kann flexibel von vielen Orten aus arbeiten.;"{""ImportId"":""QID117_5""}"
 Q43_6;Q43_6;Bei den folgenden Fragen geht es um die Art der Flexibilität ihres Berufes. - Meistens entscheide Ich selbst, von wo aus ich arbeite.;"{""ImportId"":""QID117_6""}"
+Q67;Q67;Mit welchen digitalen Endgeräten haben Sie im Arbeitsumfeld zu tun? (Mehrfachnennung möglich) - Selected Choice;"{""ImportId"":""QID106""}"
+Q67_7_TEXT;Q67_7_TEXT;Mit welchen digitalen Endgeräten haben Sie im Arbeitsumfeld zu tun? (Mehrfachnennung möglich) - Sonstiges (bitte angeben) - Text;"{""ImportId"":""QID106_7_TEXT""}"
+Q69_1;Q69_1;Nutzen Sie die folgenden Programme & Tools bei der Arbeit? - Chatprogramme;"{""ImportId"":""QID107_1""}"
+Q69_2;Q69_2;Nutzen Sie die folgenden Programme & Tools bei der Arbeit? - Emailprogramme;"{""ImportId"":""QID107_2""}"
+Q69_3;Q69_3;Nutzen Sie die folgenden Programme & Tools bei der Arbeit? - Ticketsystem;"{""ImportId"":""QID107_3""}"
+Q69_4;Q69_4;Nutzen Sie die folgenden Programme & Tools bei der Arbeit? - Organisationstools;"{""ImportId"":""QID107_4""}"
+Q53;Q53;Sind Sie in Ihrer beruflichen Laufbahn bereits in Kontakt mit unterschiedlichen IKTs getreten?;"{""ImportId"":""QID93""}"
+Q51_1;Q51_1;Bitte geben Sie die Häufigkeit ihrer Nutzung an. - Wie oft nutzen Sie in Ihrem Unternehmen  Informations- oder/und Kommunikationstechnologien, die Ihre Arbeit erleichtern sollen? (z.B. Firmeninterne Messenger-Dienste, Softwares, CRM Systeme, CMS Systeme, etc.);"{""ImportId"":""QID92_1""}"
+Q51_2;Q51_2;Bitte geben Sie die Häufigkeit ihrer Nutzung an. - Wie oft nutzen Sie Softwares, die es Ihnen erlauben, gemeinsam mit Ihren Kollegen/Geschäftspartnern an einem Dokument/Projekt zu arbeiten? (z.B. Google Docs, Hardware, o.ä.);"{""ImportId"":""QID92_2""}"
+Q57_1;Q57_1;Haben Sie das Gefühl, dass durch Ihre derzeit genutzten IKTs Arbeitsprozesse erleichtert werden? - Ich habe den Eindruck, dass Arbeitsprozesse durch IKTs erleichtert werden.;"{""ImportId"":""QID95_1""}"
+Q57_2;Q57_2;Haben Sie das Gefühl, dass durch Ihre derzeit genutzten IKTs Arbeitsprozesse erleichtert werden? - Ich habe den Eindruck, dass  Arbeitsprozesse durch IKTs beschleunigt werden.;"{""ImportId"":""QID95_2""}"
+Q57_3;Q57_3;Haben Sie das Gefühl, dass durch Ihre derzeit genutzten IKTs Arbeitsprozesse erleichtert werden? - Ich habe den Eindruck, dass ich durch IKTs in Entscheidungsprozesse mit eingebunden werde.;"{""ImportId"":""QID95_3""}"
+Q57_4;Q57_4;Haben Sie das Gefühl, dass durch Ihre derzeit genutzten IKTs Arbeitsprozesse erleichtert werden? - IKTs dienen in meinem Unternehmen dazu, Tätigkeiten aufzuteilen und an verschiedene Mitarbeiter weiterzugeben.;"{""ImportId"":""QID95_4""}"
+Q57_5;Q57_5;Haben Sie das Gefühl, dass durch Ihre derzeit genutzten IKTs Arbeitsprozesse erleichtert werden? - IKTs ermöglichen in meinem Unternehmen, die Ergebnisse der aufgeteilten Tätigkeiten zusammenzufügen.;"{""ImportId"":""QID95_5""}"
+Q74_1;Q74_1;"Bitte geben 
+Sie an, inwieweit Sie den folgenden Aussagen zustimmen. (Zur Erinnerung: Mit IKT am Arbeitsplatz sind technische Hilfsmittel zur schriftlichen Kommunikation bei der Arbeit gemeint.) - Ich mache mir oft Sorgen darüber, dass mich neue IKT-Software überfordern könnte.";"{""ImportId"":""QID64_1""}"
+Q74_2;Q74_2;"Bitte geben 
+Sie an, inwieweit Sie den folgenden Aussagen zustimmen. (Zur Erinnerung: Mit IKT am Arbeitsplatz sind technische Hilfsmittel zur schriftlichen Kommunikation bei der Arbeit gemeint.) - Mir fällt es schwer, neuer IKT-Software zu vertrauen";"{""ImportId"":""QID64_2""}"
+Q74_3;Q74_3;"Bitte geben 
+Sie an, inwieweit Sie den folgenden Aussagen zustimmen. (Zur Erinnerung: Mit IKT am Arbeitsplatz sind technische Hilfsmittel zur schriftlichen Kommunikation bei der Arbeit gemeint.) - Ich versuche immer, aktuelle Informationen über Entwicklungen neuer IKT-Software zu bekommen.";"{""ImportId"":""QID64_3""}"
+Q74_4;Q74_4;"Bitte geben 
+Sie an, inwieweit Sie den folgenden Aussagen zustimmen. (Zur Erinnerung: Mit IKT am Arbeitsplatz sind technische Hilfsmittel zur schriftlichen Kommunikation bei der Arbeit gemeint.) - Ich informiere mich über IKT-Softwareentwicklungen.";"{""ImportId"":""QID64_4""}"
+Q74_5;Q74_5;"Bitte geben 
+Sie an, inwieweit Sie den folgenden Aussagen zustimmen. (Zur Erinnerung: Mit IKT am Arbeitsplatz sind technische Hilfsmittel zur schriftlichen Kommunikation bei der Arbeit gemeint.) - Die Anwendung von IKT-Software ist insgesamt einfach.";"{""ImportId"":""QID64_5""}"
+Q74_6;Q74_6;"Bitte geben 
+Sie an, inwieweit Sie den folgenden Aussagen zustimmen. (Zur Erinnerung: Mit IKT am Arbeitsplatz sind technische Hilfsmittel zur schriftlichen Kommunikation bei der Arbeit gemeint.) - Die Anwendung von IKT-Software ist leicht verständlich";"{""ImportId"":""QID64_6""}"
+Q74_7;Q74_7;"Bitte geben 
+Sie an, inwieweit Sie den folgenden Aussagen zustimmen. (Zur Erinnerung: Mit IKT am Arbeitsplatz sind technische Hilfsmittel zur schriftlichen Kommunikation bei der Arbeit gemeint.) - Bestimmte IKT-Software würde mir helfen, meine täglichen Aufgaben bequemer zu erledigen.";"{""ImportId"":""QID64_7""}"
+Q74_8;Q74_8;"Bitte geben 
+Sie an, inwieweit Sie den folgenden Aussagen zustimmen. (Zur Erinnerung: Mit IKT am Arbeitsplatz sind technische Hilfsmittel zur schriftlichen Kommunikation bei der Arbeit gemeint.) - Bestimmte IKT-Software würde mich dabei unterstützen, meine alltäglichen Aufgaben zu erfüllen.";"{""ImportId"":""QID64_8""}"
+Q74_9;Q74_9;"Bitte geben 
+Sie an, inwieweit Sie den folgenden Aussagen zustimmen. (Zur Erinnerung: Mit IKT am Arbeitsplatz sind technische Hilfsmittel zur schriftlichen Kommunikation bei der Arbeit gemeint.) - Ich denke, dass die Nutzung von IKT-Software immer mit einem gewissen Risiko verbunden ist.";"{""ImportId"":""QID64_9""}"
+Q74_10;Q74_10;"Bitte geben 
+Sie an, inwieweit Sie den folgenden Aussagen zustimmen. (Zur Erinnerung: Mit IKT am Arbeitsplatz sind technische Hilfsmittel zur schriftlichen Kommunikation bei der Arbeit gemeint.) - Ich denke, dass IKT-Software Gefahren für mich birgt.";"{""ImportId"":""QID64_10""}"
+Q74_11;Q74_11;"Bitte geben 
+Sie an, inwieweit Sie den folgenden Aussagen zustimmen. (Zur Erinnerung: Mit IKT am Arbeitsplatz sind technische Hilfsmittel zur schriftlichen Kommunikation bei der Arbeit gemeint.) - IKT-Software würde meine Alltagsroutine stören.";"{""ImportId"":""QID64_11""}"
+Q74_12;Q74_12;"Bitte geben 
+Sie an, inwieweit Sie den folgenden Aussagen zustimmen. (Zur Erinnerung: Mit IKT am Arbeitsplatz sind technische Hilfsmittel zur schriftlichen Kommunikation bei der Arbeit gemeint.) - Die Anwendung von IKT-Software würde mir mehr Nachteile als Vorteile bringen.";"{""ImportId"":""QID64_12""}"
+Q74_13;Q74_13;"Bitte geben 
+Sie an, inwieweit Sie den folgenden Aussagen zustimmen. (Zur Erinnerung: Mit IKT am Arbeitsplatz sind technische Hilfsmittel zur schriftlichen Kommunikation bei der Arbeit gemeint.) - Ich würde IKT-Software nutzen.";"{""ImportId"":""QID64_13""}"
+Q74_14;Q74_14;"Bitte geben 
+Sie an, inwieweit Sie den folgenden Aussagen zustimmen. (Zur Erinnerung: Mit IKT am Arbeitsplatz sind technische Hilfsmittel zur schriftlichen Kommunikation bei der Arbeit gemeint.) - Ich würde mir IKT-Software anschaffen.";"{""ImportId"":""QID64_14""}"
+Q74_15;Q74_15;"Bitte geben 
+Sie an, inwieweit Sie den folgenden Aussagen zustimmen. (Zur Erinnerung: Mit IKT am Arbeitsplatz sind technische Hilfsmittel zur schriftlichen Kommunikation bei der Arbeit gemeint.) - Ich würde gerne Zugang zu IKT-Software haben.";"{""ImportId"":""QID64_15""}"
+Q63;Q63;"Haben Sie schon mal Tipps zum Umgang oder Empfehlungen zur Nutzung von IKTs erhalten? 
+(Zur Erinnerung: Mit IKT am Arbeitsplatz sind technische Hilfsmittel zur schriftlichen Kommunikation bei der Arbeit gemeint.)";"{""ImportId"":""QID104""}"
+Q45_1;Q45_1;Wie häufig erhalten Sie diese Empfehlungen? - Vorgabe des Unternehmens;"{""ImportId"":""QID119_1""}"
+Q45_2;Q45_2;Wie häufig erhalten Sie diese Empfehlungen? - Vorgesetzte/r;"{""ImportId"":""QID119_2""}"
+Q45_3;Q45_3;Wie häufig erhalten Sie diese Empfehlungen? - ArbeitskollegInnen;"{""ImportId"":""QID119_3""}"
+Q45_4;Q45_4;Wie häufig erhalten Sie diese Empfehlungen? - Freunde;"{""ImportId"":""QID119_4""}"
+Q45_5;Q45_5;Wie häufig erhalten Sie diese Empfehlungen? - Familie;"{""ImportId"":""QID119_5""}"
+Q45_6;Q45_6;Wie häufig erhalten Sie diese Empfehlungen? - Bekannte;"{""ImportId"":""QID119_6""}"
+Q45_7;Q45_7;Wie häufig erhalten Sie diese Empfehlungen? - Andere Quellen (z.B. Youtube-Tutorial);"{""ImportId"":""QID119_7""}"
+Q65_1;Q65_1;Wenn Sie derartige Empfehlungen bekommen: Bitte geben Sie an, wie hoch Ihr Vertrauen in folgenden Fällen ist: - Vorgabe des Unternehmens;"{""ImportId"":""QID105_1""}"
+Q65_2;Q65_2;Wenn Sie derartige Empfehlungen bekommen: Bitte geben Sie an, wie hoch Ihr Vertrauen in folgenden Fällen ist: - Vorgesetzte/r;"{""ImportId"":""QID105_2""}"
+Q65_3;Q65_3;Wenn Sie derartige Empfehlungen bekommen: Bitte geben Sie an, wie hoch Ihr Vertrauen in folgenden Fällen ist: - ArbeitskollegInnen;"{""ImportId"":""QID105_3""}"
+Q65_4;Q65_4;Wenn Sie derartige Empfehlungen bekommen: Bitte geben Sie an, wie hoch Ihr Vertrauen in folgenden Fällen ist: - Freunde;"{""ImportId"":""QID105_4""}"
+Q65_5;Q65_5;Wenn Sie derartige Empfehlungen bekommen: Bitte geben Sie an, wie hoch Ihr Vertrauen in folgenden Fällen ist: - Familie;"{""ImportId"":""QID105_5""}"
+Q65_6;Q65_6;Wenn Sie derartige Empfehlungen bekommen: Bitte geben Sie an, wie hoch Ihr Vertrauen in folgenden Fällen ist: - Bekannte;"{""ImportId"":""QID105_6""}"
+Q65_7;Q65_7;Wenn Sie derartige Empfehlungen bekommen: Bitte geben Sie an, wie hoch Ihr Vertrauen in folgenden Fällen ist: - Andere Quellen (z.B. Youtube-Tutorial);"{""ImportId"":""QID105_7""}"
 Q38_1;Q38_1;In diesem Block möchten wir gerne erfahren, wie Sie persönlich Ihre Arbeit wahrnehmen. - Mir fällt es schwer, privates und berufliches voneinander zu trennen.;"{""ImportId"":""QID79_1""}"
 Q38_2;Q38_2;In diesem Block möchten wir gerne erfahren, wie Sie persönlich Ihre Arbeit wahrnehmen. - Ich bin mit meiner derzeitigen Arbeit zufrieden.;"{""ImportId"":""QID79_2""}"
 Q38_3;Q38_3;In diesem Block möchten wir gerne erfahren, wie Sie persönlich Ihre Arbeit wahrnehmen. - Mein Arbeitgeber unterstützt aktiv das mobile Arbeiten.;"{""ImportId"":""QID79_3""}"
@@ -47,8 +107,18 @@ Q46_1;Q46_1;Die folgenden Aussagen beziehen sich auf Ihre Arbeitszeit und Ihre E
 Q46_2;Q46_2;Die folgenden Aussagen beziehen sich auf Ihre Arbeitszeit und Ihre Einschätzung der Möglichkeit, Arbeitszeiten flexibel einzuteilen. - Die Arbeit frei einzuteilen verbessert meine persönlichen Routinen.;"{""ImportId"":""QID83_3""}"
 Q46_3;Q46_3;Die folgenden Aussagen beziehen sich auf Ihre Arbeitszeit und Ihre Einschätzung der Möglichkeit, Arbeitszeiten flexibel einzuteilen. - Um produktiv arbeiten zu können, benötige ich feste Strukturen.;"{""ImportId"":""QID83_4""}"
 Q46_4;Q46_4;Die folgenden Aussagen beziehen sich auf Ihre Arbeitszeit und Ihre Einschätzung der Möglichkeit, Arbeitszeiten flexibel einzuteilen. - Durch Freiheiten bei der Einteilung der Arbeitszeit verliere ich schnell den Überblick über meinen tatsächlichen Arbeitsaufwand.;"{""ImportId"":""QID83_5""}"
+Q48_1;Q48_1;Bitte bewerten Sie die folgenden Aussagen zu den IKTs an Ihrem Arbeitsplatz. - Ich wurde in die von mir genutzten IKTs eingeführt.;"{""ImportId"":""QID89_1""}"
+Q48_2;Q48_2;Bitte bewerten Sie die folgenden Aussagen zu den IKTs an Ihrem Arbeitsplatz. - Ich kann die Systeme sicher bedienen.;"{""ImportId"":""QID89_2""}"
+Q48_3;Q48_3;Bitte bewerten Sie die folgenden Aussagen zu den IKTs an Ihrem Arbeitsplatz. - Die mir zur Verfügung gestellten Tools ermöglichen es mir, meine Arbeit gut zu erledigen.;"{""ImportId"":""QID89_3""}"
+Q48_4;Q48_4;Bitte bewerten Sie die folgenden Aussagen zu den IKTs an Ihrem Arbeitsplatz. - Ich bin mit den mir zur Verfügung stehenden IKTs vollkommen zufrieden.;"{""ImportId"":""QID89_4""}"
+Q48_5;Q48_5;Bitte bewerten Sie die folgenden Aussagen zu den IKTs an Ihrem Arbeitsplatz. - Ich habe das Gefühl, dass die IKTs zu meiner Arbeitszufriedenheit beitragen.;"{""ImportId"":""QID89_5""}"
 Q50_1;Q50_1;Bitte bewerten Sie die folgenden Aussagen zur Einstellung zum Unternehmen. - Ich fühle mich in die Arbeitsprozesse vollständig integriert.;"{""ImportId"":""QID90_1""}"
 Q50_2;Q50_2;Bitte bewerten Sie die folgenden Aussagen zur Einstellung zum Unternehmen. - Ich werde auch von unterwegs  in Arbeitsprozesse mit eingebunden.;"{""ImportId"":""QID90_2""}"
 Q50_3;Q50_3;Bitte bewerten Sie die folgenden Aussagen zur Einstellung zum Unternehmen. - Mir fällt es schwer, mich mit der Unternehmenskultur zu identifizieren.;"{""ImportId"":""QID90_3""}"
 Q50_4;Q50_4;Bitte bewerten Sie die folgenden Aussagen zur Einstellung zum Unternehmen. - Die genutzten Tools integrieren mich besser in die Arbeitsprozesse.;"{""ImportId"":""QID90_4""}"
 Q50_5;Q50_5;Bitte bewerten Sie die folgenden Aussagen zur Einstellung zum Unternehmen. - Im Allgemeinen bin ich mit meiner Arbeit zufrieden.;"{""ImportId"":""QID90_5""}"
+Q_RelevantIDDuplicate;Q_RelevantIDDuplicate;Q_RelevantIDDuplicate;"{""ImportId"":""Q_RelevantIDDuplicate""}"
+Q_BallotBoxStuffing;Q_BallotBoxStuffing;Q_BallotBoxStuffing;"{""ImportId"":""Q_BallotBoxStuffing""}"
+Q_RelevantIDDuplicateScore;Q_RelevantIDDuplicateScore;Q_RelevantIDDuplicateScore;"{""ImportId"":""Q_RelevantIDDuplicateScore""}"
+Q_RelevantIDFraudScore;Q_RelevantIDFraudScore;Q_RelevantIDFraudScore;"{""ImportId"":""Q_RelevantIDFraudScore""}"
+Q_TotalDuration;Q_TotalDuration;Q_TotalDuration;"{""ImportId"":""Q_TotalDuration""}"
