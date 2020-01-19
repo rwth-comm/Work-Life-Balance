@@ -20,10 +20,8 @@ df <- readRDS("data.rds")
 
 # Hypothese 1: Arbeitszufriedenheit, Switch-off
 
-
-cor(df$ZUFR_GR, df$SOFF_GR)
-
-
+## Anpassung JRH: Das sind einzelne Items. Methodisch ist das okay, solange wir Spearman oder Kendall verwenden. Die Funktion cor() braucht aber zwei numerics. 
+cor(as.numeric(df$ZUFR_GR), as.numeric(df$SOFF_GR), method = "spearman")
 
 
 
