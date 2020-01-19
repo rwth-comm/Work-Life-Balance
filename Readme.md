@@ -40,30 +40,30 @@ Die Faktoren, die uns im Team gemeinsam interessieren, sind die sozialen Interak
 * Verfahren: T-Test
 * H0: Mitarbeiter, die zufrieden mit ihren Arbeitszeiten sind und die, die unzufrieden mit ihren Arbeitszeiten sind, unterscheiden sich nicht im _Switch-off_.
 * H1: Mitarbeiter, die zufrieden mit ihren Arbeitszeiten sind und die, die unzufrieden mit ihren Arbeitszeiten sind, unterscheiden sich im _Switch-off_.
-**Feedback:** _Unverbundener_ T-Test. Schön!
+
 
 #### Hypothese 2
-* Hypothese: Mitarbeiter mit geringerer Arbeitszeit (bis zu 39 Std. pro Woche) und geringerer Arbeitsintensität (keine Überstunden) weisen einen besseren _Switch-off_ auf.
+* Hypothese: Mitarbeiter mit geringerer Arbeitszeit (bis zu 29 Std. pro Woche) und geringerer Arbeitsintensität (keine Überstunden) weisen einen besseren _Switch-off_ auf.
 * Verfahren: two-way ANOVA
 * UV: Arbeitszeit, Arbeitsintensität
 * AV: _Switch-off_
 * H0: Es gibt keinen Unterschied beim _Switch-off_ in Bezug auf die Arbeitszeit.
 * H1: Es gibt einen Unterschied beim _Switch-off_ in Bezug auf die Arbeitszeit.
-**Feedback:** Was ist "geringere Arbeitszeit"? Meinen Sie alle Gruppen außer Vollzeitarbeiter? Dann passt das :-) Schön!
+
 
 #### Hypothese 3
 * Hypothese: Mitarbeiter, die länger (über den Mediansplit der Arbeitsjahre) in der aktuellen Jobposition beschäftigt sind, weisen einen besseren _Switch-off_ auf.
 * Verfahren: T-Test
 * H0: Die Beschäftigungsdauer der Mitarbeiter hat keinen Einfluss auf den _Switch-off_.
 * H1: Die Beschäftigungsdauer der Mitarbeiter hat einen Einfluss auf den _Switch-off_.
-**Feedback:** Passt, aber Sie müssten bitte klären, was "länger" bedeutet. Mediansplit auf die Arbeitsjahre im aktuellen Job?
+
 
 #### Hypothese 4
 * Hypothese: Mitarbeiter, die den Großteil der Woche (3 Tage oder mehr) nicht am Arbeitsplatz arbeiten, weisen einen schlechteren _Switch-off_ auf.
 * Verfahren: T-Test
 * H0: Der _Switch-off_ hängt nicht von der Anzahl der Tage in der Woche ab, die Mitarbeiter nicht am Arbeitsplatz verbringen.
 * H1: Der _Switch-off_ hängt von der Anzahl der Tage in der Woche ab, die Mitarbeiter nicht am Arbeitsplatz verbringen.
-**Feedback:** Ähnlich wie bei H3. Warum ausgerechnet 3 Tage? Wenn Sie "den Großteil der Woche (3 Tage oder mehr)" schreiben, klingt das rationaler. 
+ 
 
 #### Hypothese 5:
 * Hypothese: Mitarbeiter, die flexibel in ihrem Job sind, weisen einen besseren _Switch-off_ und eine höhere Arbeitszufriedenheit auf.
@@ -72,7 +72,7 @@ Die Faktoren, die uns im Team gemeinsam interessieren, sind die sozialen Interak
 * AV: switch-Off, Arbeitszufriedenheit
 * H0: Es gibt keinen Unterschied beim _Switch-off_ und der Arbeitszufriedenheit in Bezug auf die Flexibilität im Job.
 * H1: Es gibt einen Unterschied beim _Switch-off_ und der Arbeitszufriedenheit in Bezug auf die Flexibilität im Job.
-**Feedback:** Super, aber auch hier müssen Sie aus Flexibilität erst Gruppen machen. Ansonsten sehr schön!
+**Feedback:** Super, aber auch hier müssen Sie aus Flexibilität erst Gruppen machen. Ansonsten sehr schön! - Gruppeneinteilung habe ich gemacht-> Formulierung?
 
 ---
 
