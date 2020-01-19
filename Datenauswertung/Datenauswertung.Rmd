@@ -1,0 +1,31 @@
+---
+title: "Datenauswertung"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+
+library(tidyverse)
+library(jmv)
+
+df <- readRDS("data.rds")
+
+```
+
+# Korrelationen
+
+```{r Korrelationen}
+
+# Hypothese 1: Arbeitszufriedenheit, Switch-off
+
+
+cor(df$ZUFR_GR, df$SOFF_GR)
+
+
+
+
+
+```
+
