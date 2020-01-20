@@ -104,6 +104,12 @@ t.test(as.numeric(df$SOFF_GR), mu=3.5)
 t.test(filter(df, AZZ_GR == "unzufrieden")$as.numeric(SOFF_GR), filter(df, AZZ_GR == "sehr zufrieden")$as.numeric(SOFF_GR))
 
 
+df_AZZ_GR_unzufrieden <- filter(df, AZZ_GR == "unzufrieden")
+df_AZZ_GR_sehrzufrieden <- filter(df, AZZ_GR == "sehr zufrieden")
+
+
+t.test(df_AZZ_GR_unzufrieden$SOFF_GR, df_AZZ_GR_sehrzufrieden$SOFF_GR)
+
 
 
 
@@ -116,7 +122,10 @@ t.test(filter(df, AZZ_GR == "unzufrieden")$as.numeric(SOFF_GR), filter(df, AZZ_G
 
 
 ```{r}
-# Hypothese 2: geringe Arbeitszeit (bis 29 Std./Woche), Arbeitsintensität
+# Hypothese 2: geringe Arbeitszeit (bis 29 Std./Woche), Arbeitsintensität, SWitch off
+
+
+df %>% ANOVA(dep = "SOFF_GR", factors = c("AZ_GR", "AI_GR"))
 
 
 
@@ -131,6 +140,9 @@ t.test(filter(df, AZZ_GR == "unzufrieden")$as.numeric(SOFF_GR), filter(df, AZZ_G
 ```{r}
 
 # Hypothese 3: Anstellungsdauer, Switch-off
+
+
+
 
 
 
