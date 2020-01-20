@@ -9,6 +9,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 library(tidyverse)
 library(jmv)
+library(ggplot2)
 
 df <- readRDS("data.rds")
 
@@ -34,6 +35,23 @@ cor.test(as.numeric(df$ZUFR_GR), as.numeric(df$SOFF_GR), method = "kendall")
 
 ```
 signifikant, kendall tau, 0.186. es gibt zusammenhang aber nur sehr schwach. deshalb keine aussagekraft. beim ausformulieren darauf achten wie die hypothesen formuliert waren.
+```{r Visualisierung Hypothese 1}
+
+
+df %>% ggplot() + aes(x = ZUFR, y = SOFF) + geom_point(alpha = 0.5) + geom_smooth(method = lm, color = "black") + cowplot::theme_half_open() + labs(x = "Zufriedenheit", y = "Switch-off", title = "Zufriedenheit und Switch-off korrelieren negativ.")
+
+
+
+df %>% ggplot() + aes(x = ZUFR_GR, y = SOFF_GR) +
+geom_jitter(alpha = 0.25, width = 0.2, height = 0.2) + geom_smooth(method = lm, color = "black") + cowplot::theme_half_open() + labs(x = "Zufriedenheit", y = "Switch-off", title = "robo_bed und robo_med korrelieren positiv.")
+
+```
+
+
+
+
+
+
 
 
 ```{r}
@@ -97,21 +115,24 @@ cor.test(as.numeric(df$EN_GR), as.numeric(df$SOFF_GR), method = "kendall")
 
 # Hypothese 1: Arbetszeit-Zufriedenheit, Switch-Off
 
-t.test(as.numeric(df$SOFF_GR), mu=3.5)
+
+#t.test(as.numeric(df$SOFF_GR), mu=3.5)
+#df_AZZ_GR_unzufrieden <- filter(df, AZZ_GR == "unzufrieden")
+#df_AZZ_GR_sehrzufrieden <- filter(df, AZZ_GR == "sehr zufrieden")
+
+
+#JRH: Das hier geht:
+#t.test(as.numeric(df_AZZ_GR_unzufrieden$SOFF_GR), as.numeric(df_AZZ_GR_sehrzufrieden$SOFF_GR))
+
+
+#df_AZZ_GR_unzufrieden$SOFF_GR <- as.numeric(df_AZZ_GR_unzufrieden$SOFF_GR)
+#df_AZZ_GR_sehrzufrieden$SOFF_GR <- as.numeric(df_AZZ_GR_sehrzufrieden$SOFF_GR)
+
+#wilcox.test(df_AZZ_GR_unzufrieden$SOFF_GR, df_AZZ_GR_sehrzufrieden$SOFF_GR)
 
 
 
-t.test(filter(df, AZZ_GR == "unzufrieden")$as.numeric(SOFF_GR), filter(df, AZZ_GR == "sehr zufrieden")$as.numeric(SOFF_GR))
-
-
-df_AZZ_GR_unzufrieden <- filter(df, AZZ_GR == "unzufrieden")
-df_AZZ_GR_sehrzufrieden <- filter(df, AZZ_GR == "sehr zufrieden")
-
-
-t.test(df_AZZ_GR_unzufrieden$SOFF_GR, df_AZZ_GR_sehrzufrieden$SOFF_GR)
-
-
-
+t.test(df_AZZ_GR_unzufrieden$SOFF, df_AZZ_GR_sehrzufrieden$SOFF)
 
 
 
@@ -125,7 +146,17 @@ t.test(df_AZZ_GR_unzufrieden$SOFF_GR, df_AZZ_GR_sehrzufrieden$SOFF_GR)
 # Hypothese 2: geringe Arbeitszeit (bis 29 Std./Woche), Arbeitsintensität, SWitch off
 
 
-df %>% ANOVA(dep = "SOFF_GR", factors = c("AZ_GR", "AI_GR"))
+df %>% ANOVA(dep = "SOFF", factors = c("AZ_GR", "AI_GR"))
+
+
+
+#df$SOFF_GR <- as.numeric(df$SOFF_GR)
+
+#df %>% 
+  #ANOVA(dep = "SOFF_GR", factors = c("AZ_GR", "AI_GR"))
+
+
+
 
 
 
