@@ -20,8 +20,130 @@ df <- readRDS("data.rds")
 
 # Hypothese 1: Arbeitszufriedenheit, Switch-off
 
+#### Hypothesen "richtig reinschreiben"
+
 ## Anpassung JRH: Das sind einzelne Items. Methodisch ist das okay, solange wir Spearman oder Kendall verwenden. Die Funktion cor() braucht aber zwei numerics. 
+
 cor(as.numeric(df$ZUFR_GR), as.numeric(df$SOFF_GR), method = "spearman")
+cor(as.numeric(df$ZUFR_GR), as.numeric(df$SOFF_GR), method = "kendall")
+
+cor.test(as.numeric(df$ZUFR_GR), as.numeric(df$SOFF_GR), method = "spearman")
+cor.test(as.numeric(df$ZUFR_GR), as.numeric(df$SOFF_GR), method = "kendall")
+
+
+
+```
+signifikant, kendall tau, 0.186. es gibt zusammenhang aber nur sehr schwach. deshalb keine aussagekraft. beim ausformulieren darauf achten wie die hypothesen formuliert waren.
+
+
+```{r}
+# Hypothese 2: Position der Arbeit, Switch-off
+
+cor.test(as.numeric(df$JOB_GR), as.numeric(df$SOFF_GR), method = "spearman")
+cor.test(as.numeric(df$JOB_GR), as.numeric(df$SOFF_GR), method = "kendall")
+
+
+
+
+
+```
+
+wenn berichten dann werte ausgeben lassen.
+
+```{r}
+# Hypothese 3: Remote Working, Switch-off
+
+cor.test(as.numeric(df$MA_GR), as.numeric(df$SOFF_GR), method = "pearson")
+cor.test(as.numeric(df$MA_GR), as.numeric(df$SOFF_GR), method = "spearman")
+cor.test(as.numeric(df$MA_GR), as.numeric(df$SOFF_GR), method = "kendall")
+
+  
+  
+  
+  
+```
+
+wahrscheinlich nehmen wir die ganze zeit Kendall. pearson wahrscheinlich überhaupt nicht
+
+
+
+```{r}
+# Hypothese 4: Flexibilität, Arbeitszufriedenheit
+
+
+cor.test(as.numeric(df$FLEX_GR), as.numeric(df$ZUFR_GR), method = "spearman")
+cor.test(as.numeric(df$FLEX_GR), as.numeric(df$ZUFR_GR), method = "kendall")
+
+
+```
+
+```{r}
+
+# Hypthese 5: Entfernung zur Arbeit, Switch-off
+
+cor.test(as.numeric(df$EN_GR), as.numeric(df$SOFF_GR), method = "spearman")
+cor.test(as.numeric(df$EN_GR), as.numeric(df$SOFF_GR), method = "kendall")
+
+
+```
+
+
+
+
+# Unterschiede
+
+
+```{r}
+
+# Hypothese 1: Arbetszeit-Zufriedenheit, Switch-Off
+
+t.test(as.numeric(df$SOFF_GR), mu=3.5)
+
+
+
+t.test(filter(df, AZZ_GR == "unzufrieden")$as.numeric(SOFF_GR), filter(df, AZZ_GR == "sehr zufrieden")$as.numeric(SOFF_GR))
+
+
+
+
+
+
+
+```
+
+
+
+
+
+```{r}
+# Hypothese 2: geringe Arbeitszeit (bis 29 Std./Woche), Arbeitsintensität
+
+
+
+```
+
+
+
+
+
+
+
+```{r}
+
+# Hypothese 3: Anstellungsdauer, Switch-off
+
+
+
+
+```
+
+
+
+```{r}
+
+# Hypothese 4: mobiles Arbeiten, Switch-Off
+
+
 
 
 
