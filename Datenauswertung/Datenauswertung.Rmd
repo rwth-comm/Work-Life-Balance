@@ -15,9 +15,21 @@ df <- readRDS("data.rds")
 
 ```
 
+
+noch Diagramme anpassen bzgl. limits und im generellen überprüfen
+
+
+
+to do:
+
+* hypothesen aufschreiben und beantworten, berichten wie auf Folien vorgegeben (Unterschiedshypothesen)
+* ggf Visualisierungen für Unterschiedshypothesen (boxplots?)
+* berichten von Unterschiedshypothesen (Video dazu in der Youtube Playlist "WS19/20 Seminar - Forschungsmethoden 10. ANOVA" dort wird das alles soweit vorgestellt, denke auch Visualisierungen)
+
+
 # Korrelationen
 
-```{r Korrelationen}
+```{r}
 
 # Hypothese 1: Arbeitszufriedenheit, Switch-off
 
@@ -25,58 +37,68 @@ df <- readRDS("data.rds")
 
 ## Anpassung JRH: Das sind einzelne Items. Methodisch ist das okay, solange wir Spearman oder Kendall verwenden. Die Funktion cor() braucht aber zwei numerics. 
 
-cor(as.numeric(df$ZUFR_GR), as.numeric(df$SOFF_GR), method = "spearman")
-cor(as.numeric(df$ZUFR_GR), as.numeric(df$SOFF_GR), method = "kendall")
+#cor(as.numeric(df$ZUFR_GR), as.numeric(df$SOFF_GR), method = "spearman")
+#cor(as.numeric(df$ZUFR_GR), as.numeric(df$SOFF_GR), method = "kendall")
 
-cor.test(as.numeric(df$ZUFR_GR), as.numeric(df$SOFF_GR), method = "spearman")
-cor.test(as.numeric(df$ZUFR_GR), as.numeric(df$SOFF_GR), method = "kendall")
+#cor.test(as.numeric(df$ZUFR_GR), as.numeric(df$SOFF_GR), method = "spearman")
+#cor.test(as.numeric(df$ZUFR_GR), as.numeric(df$SOFF_GR), method = "kendall")
 
 
+#cor(df$ZUFR, df$SOFF, method = "pearson") #nicht geeignet
+#cor(df$ZUFR, df$SOFF, method = "spearman")
+cor(df$ZUFR, df$SOFF, method = "kendall")
 
-```
-signifikant, kendall tau, 0.186. es gibt zusammenhang aber nur sehr schwach. deshalb keine aussagekraft. beim ausformulieren darauf achten wie die hypothesen formuliert waren.
-```{r Visualisierung Hypothese 1}
+#cor.test(df$ZUFR, df$SOFF, method = "spearman")
+cor.test(df$ZUFR, df$SOFF, method = "kendall")
+
+
 
 
 df %>% ggplot() + aes(x = ZUFR, y = SOFF) + geom_point(alpha = 0.5) + geom_smooth(method = lm, color = "black") + cowplot::theme_half_open() + labs(x = "Zufriedenheit", y = "Switch-off", title = "Zufriedenheit und Switch-off korrelieren negativ.")
 
 
 
-df %>% ggplot() + aes(x = ZUFR_GR, y = SOFF_GR) +
-geom_jitter(alpha = 0.25, width = 0.2, height = 0.2) + geom_smooth(method = lm, color = "black") + cowplot::theme_half_open() + labs(x = "Zufriedenheit", y = "Switch-off", title = "robo_bed und robo_med korrelieren positiv.")
+# das hier bei Gruppen, jedoch für uns wahrscheinlich unwichtig: 
+
+#df %>% ggplot() + aes(x = ZUFR_GR, y = SOFF_GR) + geom_jitter(alpha = 0.25, width = 0.2, height = 0.2) + geom_smooth(method = lm, color = "black") + cowplot::theme_half_open() + labs(x = "Zufriedenheit", y = "Switch-off", title = "robo_bed und robo_med korrelieren positiv.")
+
+
 
 ```
-
-
-
-
-
+signifikant, kendall tau, 0.123. es gibt zusammenhang aber nur sehr schwach. deshalb keine aussagekraft. beim ausformulieren darauf achten wie die hypothesen formuliert waren.
 
 
 
 ```{r}
 # Hypothese 2: Position der Arbeit, Switch-off
 
-cor.test(as.numeric(df$JOB_GR), as.numeric(df$SOFF_GR), method = "spearman")
-cor.test(as.numeric(df$JOB_GR), as.numeric(df$SOFF_GR), method = "kendall")
+#cor.test(as.numeric(df$JOB_GR), as.numeric(df$SOFF_GR), method = "spearman")
+#cor.test(as.numeric(df$JOB_GR), as.numeric(df$SOFF_GR), method = "kendall")
 
 
+cor.test(as.numeric(df$JOB_GR), df$SOFF, method = "kendall")
 
+df %>% ggplot() + aes(x = JOB_GR, y = SOFF) + geom_jitter(alpha = 0.25, width = 0.2, height = 0.2) + geom_smooth(method = lm, color = "black") + cowplot::theme_half_open() + labs(x = "Zufriedenheit", y = "Switch-off", title = "Zufriedenheit und Switch-off korrelieren negativ.")
 
 
 ```
 
 wenn berichten dann werte ausgeben lassen.
 
+
 ```{r}
 # Hypothese 3: Remote Working, Switch-off
 
-cor.test(as.numeric(df$MA_GR), as.numeric(df$SOFF_GR), method = "pearson")
-cor.test(as.numeric(df$MA_GR), as.numeric(df$SOFF_GR), method = "spearman")
-cor.test(as.numeric(df$MA_GR), as.numeric(df$SOFF_GR), method = "kendall")
+#cor.test(as.numeric(df$MA_GR), as.numeric(df$SOFF_GR), method = "pearson")
+#cor.test(as.numeric(df$MA_GR), as.numeric(df$SOFF_GR), method = "spearman")
+#cor.test(as.numeric(df$MA_GR), as.numeric(df$SOFF_GR), method = "kendall")
 
-  
-  
+cor.test(as.numeric(df$MA_GR), df$SOFF, method = "kendall")
+
+
+
+df %>% ggplot() + aes(x = MA_O, y = SOFF) + geom_jitter(alpha = 0.25, width = 0.2, height = 0.2) + geom_smooth(method = lm, color = "black") + cowplot::theme_half_open() + labs(x = "Zufriedenheit", y = "Switch-off", title = "Zufriedenheit und Switch-off korrelieren negativ.")
+
   
   
 ```
@@ -89,18 +111,39 @@ wahrscheinlich nehmen wir die ganze zeit Kendall. pearson wahrscheinlich überha
 # Hypothese 4: Flexibilität, Arbeitszufriedenheit
 
 
-cor.test(as.numeric(df$FLEX_GR), as.numeric(df$ZUFR_GR), method = "spearman")
-cor.test(as.numeric(df$FLEX_GR), as.numeric(df$ZUFR_GR), method = "kendall")
+#cor.test(as.numeric(df$FLEX_GR), as.numeric(df$ZUFR_GR), method = "spearman")
+#cor.test(as.numeric(df$FLEX_GR), as.numeric(df$ZUFR_GR), method = "kendall")
+
+
+#cor.test(df$FLEX, df$ZUFR, method = "spearman")
+cor.test(df$FLEX, df$ZUFR, method = "kendall")
+
+
+
+
+df %>% ggplot() + aes(x = FLEX, y = ZUFR) + geom_point(alpha = 0.5) + geom_smooth(method = lm, color = "black") + cowplot::theme_half_open() + labs(x = "Zufriedenheit", y = "Switch-off", title = "Zufriedenheit und Switch-off korrelieren negativ.")
+
+
+
 
 
 ```
+
+
 
 ```{r}
 
 # Hypthese 5: Entfernung zur Arbeit, Switch-off
 
-cor.test(as.numeric(df$EN_GR), as.numeric(df$SOFF_GR), method = "spearman")
-cor.test(as.numeric(df$EN_GR), as.numeric(df$SOFF_GR), method = "kendall")
+#cor.test(as.numeric(df$EN_GR), as.numeric(df$SOFF_GR), method = "spearman")
+#cor.test(as.numeric(df$EN_GR), as.numeric(df$SOFF_GR), method = "kendall")
+
+cor.test(as.numeric(df$EN_GR), df$SOFF, method = "kendall")
+
+
+
+df %>% ggplot() + aes(x = EN_GR, y = SOFF) + geom_jitter(alpha = 0.25, width = 0.2, height = 0.2) + geom_smooth(method = lm, color = "black") + cowplot::theme_half_open() + labs(x = "Zufriedenheit", y = "Switch-off", title = "Zufriedenheit und Switch-off korrelieren negativ.")
+
 
 
 ```
@@ -115,16 +158,23 @@ cor.test(as.numeric(df$EN_GR), as.numeric(df$SOFF_GR), method = "kendall")
 
 # Hypothese 1: Arbetszeit-Zufriedenheit, Switch-Off
 
-
+#einfacher t-test
 #t.test(as.numeric(df$SOFF_GR), mu=3.5)
-#df_AZZ_GR_unzufrieden <- filter(df, AZZ_GR == "unzufrieden")
-#df_AZZ_GR_sehrzufrieden <- filter(df, AZZ_GR == "sehr zufrieden")
+
+
+
+
+# hier wichtig bestimmen, welche Gruppen wir vergleichen wollen, und ob eine Anova mehr Sinn macht
+
+df_AZZ_GR_unzufrieden <- filter(df, AZZ_GR == "unzufrieden")
+df_AZZ_GR_sehrzufrieden <- filter(df, AZZ_GR == "sehr zufrieden")
 
 
 #JRH: Das hier geht:
 #t.test(as.numeric(df_AZZ_GR_unzufrieden$SOFF_GR), as.numeric(df_AZZ_GR_sehrzufrieden$SOFF_GR))
 
 
+#U-Test (brauchen wir wahrscheinlich nicht)
 #df_AZZ_GR_unzufrieden$SOFF_GR <- as.numeric(df_AZZ_GR_unzufrieden$SOFF_GR)
 #df_AZZ_GR_sehrzufrieden$SOFF_GR <- as.numeric(df_AZZ_GR_sehrzufrieden$SOFF_GR)
 
@@ -146,8 +196,13 @@ t.test(df_AZZ_GR_unzufrieden$SOFF, df_AZZ_GR_sehrzufrieden$SOFF)
 # Hypothese 2: geringe Arbeitszeit (bis 29 Std./Woche), Arbeitsintensität, SWitch off
 
 
-df %>% ANOVA(dep = "SOFF", factors = c("AZ_GR", "AI_GR"))
+# in der Hypothese eigentlich bis 39 Std!!
 
+
+df %>% ANOVA(dep = "SOFF", factors = c("AZ_GR", "AI_GR"), effectSize = "partEta", 
+             postHoc = SOFF ~ AZ_GR,
+             emMeans = ~ AZ_GR, 
+             emmPlots = TRUE)
 
 
 #df$SOFF_GR <- as.numeric(df$SOFF_GR)
@@ -172,7 +227,11 @@ df %>% ANOVA(dep = "SOFF", factors = c("AZ_GR", "AI_GR"))
 
 # Hypothese 3: Anstellungsdauer, Switch-off
 
+#hilfestellung
+# t.test(filter(data,gender == "männlich")$KUT, filter(data, gender == "weiblich")$KUT)
 
+
+#### das hier noch gucken wie das geht ->      t.test(filter(df, AD_GR == "0")$SOFF, filter(df,AD_GR == "1")$SOFF)
 
 
 
@@ -187,8 +246,35 @@ df %>% ANOVA(dep = "SOFF", factors = c("AZ_GR", "AI_GR"))
 # Hypothese 4: mobiles Arbeiten, Switch-Off
 
 
+### funktioniert noch nicht
+
+
+#df_MA_GR_geringerAnteil <- filter(df, MA_GR == "geringer Anteil der Woche (≤ 2 Tage/Woche)")
+#df_MA_GR_Grossteil <- filter(df, MA_GR == "Großteil der Woche (≥ 3 Tage/Woche)")
+
+
+#   t.test(filter(df, MA_GR == "geringer Anteil der Woche (≤ 2 Tage/Woche)")$SOFF, filter(df,MA_GR == "Großteil der Woche (≥ 3 Tage/Woche)")$SOFF)
 
 
 
 ```
+
+```{r}
+
+# Hypothese 5: UV: Flexibilität   AV: Switch-off, Arbeitszufriedenheit
+# One way Manova
+
+
+#ist das selbe wie unten
+#obwohl wir hier eine manova rechnen, benutzen wir mancova, da in dieser Funktion der covs Wert (Covariate) standardmäßig auf NULL steht
+#df %>% mancova(dep = c("SOFF", "ZUFR"), factors = "FLEX")
+
+mancova(df, deps = c("SOFF", "ZUFR"), factors = "FLEX")
+
+
+
+
+
+```
+
 
