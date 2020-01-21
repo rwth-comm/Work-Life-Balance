@@ -167,6 +167,7 @@ print("Hypothese 1: Mitarbeiter, die mit ihren Arbeitszeiten zufrieden sind, wei
 # hier wichtig bestimmen, welche Gruppen wir vergleichen wollen, und ob eine Anova mehr Sinn macht
 
 df_AZZ_GR_unzufrieden <- filter(df, AZZ_GR == "unzufrieden")
+df_AZZ_GR_zufrieden <- filter(df, AZZ_GR == "zufrieden")
 df_AZZ_GR_sehrzufrieden <- filter(df, AZZ_GR == "sehr zufrieden")
 
 
@@ -182,8 +183,22 @@ df_AZZ_GR_sehrzufrieden <- filter(df, AZZ_GR == "sehr zufrieden")
 
 
 
-t.test(df_AZZ_GR_unzufrieden$SOFF, df_AZZ_GR_sehrzufrieden$SOFF)
+#t.test(df_AZZ_GR_unzufrieden$SOFF, df_AZZ_GR_sehrzufrieden$SOFF)
+#t.test(df_AZZ_GR_unzufrieden$SOFF, df_AZZ_GR_zufrieden$SOFF)
 
+#t.test(df_AZZ_GR_zufrieden$SOFF, df_AZZ_GR_unzufrieden$SOFF)
+#t.test(df_AZZ_GR_sehrzufrieden$SOFF, df_AZZ_GR_unzufrieden$SOFF)
+
+
+
+
+
+
+
+df %>% ANOVA(dep = "SOFF", factors = c("AZZ_GR"))
+
+             
+             
 print("In der Stichprobe fällt Menschen, die mit ihren Arbeitszeiten zufrieden sind, der Switch Off leichter als Menschen, die mit ihren Arbeitszeiten unzufrieden sind. Dieser Unterschied ist signifikant. (t(41.54 = -2.407, P < .05) und liegt mit 95% Sicherheit zwischen 0.05 und 0.57 Punkten einer 6-stufigen Skala.")
 
 ```
@@ -199,10 +214,13 @@ print("Hypothese 2: Mitarbeiter mit geringerer Arbeitszeit (bis zu 29 Std. pro W
 
 
 
-df %>% ANOVA(dep = "SOFF", factors = c("AZ_GR", "AI_GR"), effectSize = "partEta", 
-             postHoc = SOFF ~ AZ_GR,
-             emMeans = ~ AZ_GR, 
-             emmPlots = TRUE)
+df %>% ANOVA(dep = "SOFF", factors = c("AZ_GR", "AI_GR"))
+             
+             
+             #effectSize = "partEta", 
+             #postHoc = SOFF ~ AZ_GR,
+             #emMeans = ~ AZ_GR, 
+             #emmPlots = TRUE)
   
 
 #df$SOFF_GR <- as.numeric(df$SOFF_GR)
@@ -231,7 +249,9 @@ print("Hypothese 3: Mitarbeiter, die länger (über den Mediansplit der Arbeitsj
 # t.test(filter(data,gender == "männlich")$KUT, filter(data, gender == "weiblich")$KUT)
 
 
-#### das hier noch gucken wie das geht ->      t.test(filter(df, AD_GR == "0")$SOFF, filter(df,AD_GR == "1")$SOFF)
+#### das hier noch gucken wie das geht ->      
+
+#t.test(filter(df, AD_GR == "0:1")$SOFF, filter(df,AD_GR == "2:5")$SOFF)
 
 
 
