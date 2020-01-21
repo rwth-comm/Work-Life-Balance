@@ -156,7 +156,7 @@ df %>% ggplot() + aes(x = EN_GR, y = SOFF) + geom_jitter(alpha = 0.25, width = 0
 
 ```{r}
 
-# Hypothese 1: Arbetszeit-Zufriedenheit, Switch-Off
+print("Hypothese 1: Mitarbeiter, die mit ihren Arbeitszeiten zufrieden sind, weisen einen besseren Switch-Off auf.")
 
 #einfacher t-test
 #t.test(as.numeric(df$SOFF_GR), mu=3.5)
@@ -184,7 +184,7 @@ df_AZZ_GR_sehrzufrieden <- filter(df, AZZ_GR == "sehr zufrieden")
 
 t.test(df_AZZ_GR_unzufrieden$SOFF, df_AZZ_GR_sehrzufrieden$SOFF)
 
-
+print("In der Stichprobe fällt Menschen, die mit ihren Arbeitszeiten zufrieden sind, der Switch Off leichter als Menschen, die mit ihren Arbeitszeiten unzufrieden sind. Dieser Unterschied ist signifikant. (t(41.54 = -2.407, P < .05) und liegt mit 95% Sicherheit zwischen 0.05 und 0.57 Punkten einer 6-stufigen Skala.")
 
 ```
 
@@ -193,17 +193,17 @@ t.test(df_AZZ_GR_unzufrieden$SOFF, df_AZZ_GR_sehrzufrieden$SOFF)
 
 
 ```{r}
-# Hypothese 2: geringe Arbeitszeit (bis 29 Std./Woche), Arbeitsintensität, SWitch off
+print("Hypothese 2: Mitarbeiter mit geringerer Arbeitszeit (bis zu 29 Std. pro Woche) und geringerer Arbeitsintensität (keine Überstunden) weisen einen besseren Switch-Off auf.")
 
 
-# in der Hypothese eigentlich bis 39 Std!!
+
 
 
 df %>% ANOVA(dep = "SOFF", factors = c("AZ_GR", "AI_GR"), effectSize = "partEta", 
              postHoc = SOFF ~ AZ_GR,
              emMeans = ~ AZ_GR, 
              emmPlots = TRUE)
-
+  
 
 #df$SOFF_GR <- as.numeric(df$SOFF_GR)
 
@@ -225,7 +225,7 @@ df %>% ANOVA(dep = "SOFF", factors = c("AZ_GR", "AI_GR"), effectSize = "partEta"
 
 ```{r}
 
-# Hypothese 3: Anstellungsdauer, Switch-off
+print("Hypothese 3: Mitarbeiter, die länger (über den Mediansplit der Arbeitsjahre) in der aktuellen Jobposition beschäftigt sind, weisen einen besseren Switch-Off auf.") 
 
 #hilfestellung
 # t.test(filter(data,gender == "männlich")$KUT, filter(data, gender == "weiblich")$KUT)
@@ -243,7 +243,7 @@ df %>% ANOVA(dep = "SOFF", factors = c("AZ_GR", "AI_GR"), effectSize = "partEta"
 
 ```{r}
 
-# Hypothese 4: mobiles Arbeiten, Switch-Off
+print("Hypothese 4: Mitarbeiter, die den Großteil der Woche (drei oder mehr Tage) nicht am Arbeitsplatz arbeiten, weisen einen schlechteren Switch-Off auf.")
 
 
 ### funktioniert noch nicht
@@ -261,7 +261,7 @@ df %>% ANOVA(dep = "SOFF", factors = c("AZ_GR", "AI_GR"), effectSize = "partEta"
 
 ```{r}
 
-# Hypothese 5: UV: Flexibilität   AV: Switch-off, Arbeitszufriedenheit
+print("Hypothese 5: Mitarbeiter, die flexibel in ihrem Job sind, weisen einen besseren Switch-Off und eine höhere Arbeitszufriedenheit auf.")
 # One way Manova
 
 
