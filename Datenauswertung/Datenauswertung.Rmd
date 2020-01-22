@@ -208,7 +208,7 @@ print("In der Stichprobe fällt Menschen, die mit ihren Arbeitszeiten zufrieden 
 
 
 ```{r}
-print("Hypothese 2: Mitarbeiter mit geringerer Arbeitszeit (bis zu 29 Std. pro Woche) und geringerer Arbeitsintensität (keine Überstunden) weisen einen besseren Switch-Off auf.")
+("Hypothese 2: Mitarbeiter mit geringerer Arbeitszeit (bis zu 29 Std. pro Woche) und geringerer Arbeitsintensität (keine Überstunden) weisen einen besseren Switch-Off auf.")
 
 
 
@@ -235,6 +235,8 @@ df %>% ANOVA(dep = "SOFF", factors = c("AZ_GR", "AI_GR"))
 
 ```
 
+Es gibt keinen signifikanten unterschied zwischen der Arbeitszeit und dem Switch off (p > .05). Anders ist es bei der Arbeitintensität und dem Switch off, hier gibt es einen signifikanten Unterschied (p < .001). 
+Betrachtet man Arbeitszeit und -intensität in Bezug auf den Switch off, gibt es wiederum keinen signifikanten Unterschied (p > .05).
 
 
 
@@ -296,5 +298,6 @@ mancova(df, deps = c("SOFF", "ZUFR"), factors = "FLEX")
 
 
 ```
-
+Es gibt keinen signifikaten Unterschied zwischen der Arbeitsintensität und dem Switch Off (p > 0.05).
+Anders ist es bei der Arbeitsflexibilität und der Arbeitszufriedenheit. Hier besteht ein signifikanter Unterschied (p < 0.001).
 
