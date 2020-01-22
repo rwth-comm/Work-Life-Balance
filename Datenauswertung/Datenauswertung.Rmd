@@ -27,6 +27,10 @@ to do:
 * berichten von Unterschiedshypothesen (Video dazu in der Youtube Playlist "WS19/20 Seminar - Forschungsmethoden 10. ANOVA" dort wird das alles soweit vorgestellt, denke auch Visualisierungen)
 
 
+* corrMAtrix aufstellen, um mögliche Zusammenhänge von Variablen zu erkennen
+* Erkenntnis bei uns vielleicht, dass bestimmte hier untersuchte Variablen **nicht** mit dem Switch-off in Verbindung stehen. Für Ausblick, dass man weitere Variablen herausfinden muss.
+
+
 # Korrelationen
 
 ```{r}
@@ -202,7 +206,8 @@ df %>% ANOVA(dep = "SOFF", factors = c("AZZ_GR"))
 print("In der Stichprobe fällt Menschen, die mit ihren Arbeitszeiten zufrieden sind, der Switch Off leichter als Menschen, die mit ihren Arbeitszeiten unzufrieden sind. Dieser Unterschied ist signifikant. (t(41.54 = -2.407, P < .05) und liegt mit 95% Sicherheit zwischen 0.05 und 0.57 Punkten einer 6-stufigen Skala.")
 
 ```
-
+Es gibt einen signifikanten Unterschied zwischen der Arbeitszufriedenheit und dem Switch off (p < .001).
+Es gibt einen signifikanten Unterschied zwischen der Arbeitszeit und dem Switch off F(2) = 11.7, p < .001
 
 
 
