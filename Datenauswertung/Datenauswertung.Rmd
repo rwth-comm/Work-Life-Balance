@@ -15,25 +15,9 @@ df <- readRDS("data.rds")
 
 ```
 
-
-noch Diagramme anpassen bzgl. limits und im generellen überprüfen
-
-
-
-to do:
-
-* hypothesen aufschreiben und beantworten, berichten wie auf Folien vorgegeben (Unterschiedshypothesen)
-* ggf Visualisierungen für Unterschiedshypothesen (boxplots?)
-* berichten von Unterschiedshypothesen (Video dazu in der Youtube Playlist "WS19/20 Seminar - Forschungsmethoden 10. ANOVA" dort wird das alles soweit vorgestellt, denke auch Visualisierungen)
-
-
-* corrMAtrix aufstellen, um mögliche Zusammenhänge von Variablen zu erkennen
-* Erkenntnis bei uns vielleicht, dass bestimmte hier untersuchte Variablen **nicht** mit dem Switch-off in Verbindung stehen. Für Ausblick, dass man weitere Variablen herausfinden muss.
-
-
 # Korrelationen
 
-```{r}
+```{r include=FALSE}
 
 # Hypothese 1: Arbeitszufriedenheit, Switch-off
 
@@ -50,17 +34,13 @@ to do:
 
 #cor(df$ZUFR, df$SOFF, method = "pearson") #nicht geeignet
 #cor(df$ZUFR, df$SOFF, method = "spearman")
-cor(df$ZUFR, df$SOFF, method = "kendall")
+#cor(df$ZUFR, df$SOFF, method = "kendall")
 
 #cor.test(df$ZUFR, df$SOFF, method = "spearman")
+
+
+
 cor.test(df$ZUFR, df$SOFF, method = "kendall")
-
-
-
-
-df %>% ggplot() + aes(x = ZUFR, y = SOFF) + geom_point(alpha = 0.5) + geom_smooth(method = lm, color = "black") + cowplot::theme_half_open() + labs(x = "Zufriedenheit", y = "Switch-off", title = "Zufriedenheit und Switch-off korrelieren negativ.")
-
-
 
 # das hier bei Gruppen, jedoch für uns wahrscheinlich unwichtig: 
 
@@ -69,11 +49,26 @@ df %>% ggplot() + aes(x = ZUFR, y = SOFF) + geom_point(alpha = 0.5) + geom_smoot
 
 
 ```
-signifikant, kendall tau, 0.123. es gibt zusammenhang aber nur sehr schwach. deshalb keine aussagekraft. beim ausformulieren darauf achten wie die hypothesen formuliert waren.
+
+<br>
 
 
 
-```{r}
+#### Hypothese 1:
+Je höher die  Arbeitszufriedenheit, desto einfacher fällt der Switch-off.
+
+Es gibt einen positiven signifikanten Zusammenhang zwischen der Arbeitszufriedenheit und dem Switch-off ($\tau = 0.123$, $p<0.001$). Das bedeutet, dass mit steigender Arbeitszufriedenheit die Fähigkeit von der Arbeit abzuschalten steigt.
+
+![](images/korhyp1.PNG)
+
+```{r include=FALSE}
+df %>% ggplot() + aes(x = ZUFR, y = SOFF) + geom_point(alpha = 0.5) + geom_smooth(method = lm, color = "black") + cowplot::theme_half_open() + scale_y_continuous(limits= c(1,6), breaks = 1:6) + labs(x = "Arbeitszufriedenheit", y = "Switch-off", title = "Arbeitszufriedenheit und Switch-off korrelieren positiv.")
+```
+
+
+
+
+```{r include=FALSE}
 # Hypothese 2: Position der Arbeit, Switch-off
 
 #cor.test(as.numeric(df$JOB_GR), as.numeric(df$SOFF_GR), method = "spearman")
@@ -82,15 +77,25 @@ signifikant, kendall tau, 0.123. es gibt zusammenhang aber nur sehr schwach. des
 
 cor.test(as.numeric(df$JOB_GR), df$SOFF, method = "kendall")
 
-df %>% ggplot() + aes(x = JOB_GR, y = SOFF) + geom_jitter(alpha = 0.25, width = 0.2, height = 0.2) + geom_smooth(method = lm, color = "black") + cowplot::theme_half_open() + labs(x = "Zufriedenheit", y = "Switch-off", title = "Zufriedenheit und Switch-off korrelieren negativ.")
 
+```
+<br>
+
+
+#### Hypothese 2:
+Je höher die Position bei der Arbeit, desto schwieriger fällt der Switch-off.
+
+Es gibt keinen signifikanten Zusammenhang zwischen der Position der Arbeit und dem Switch-off ($\tau=-0.054$, $p>0.05$) oder dieser konnte hier nicht festgestellt werden.
+
+![](images/korhyp2.png)
+```{r include=FALSE}
+
+df %>% ggplot() + aes(x = JOB_GR, y = SOFF) + geom_jitter(alpha = 0.25, width = 0.2, height = 0.2) + geom_smooth(method = lm, color = "black") + cowplot::theme_half_open() + scale_y_continuous(limits = c(1,6), breaks = 1:6) + labs(x = "Position der Arbeit", y = "Switch-off", title = "Arbeitsposition und Switch-off korrelieren nicht signifikant.")
 
 ```
 
-wenn berichten dann werte ausgeben lassen.
 
-
-```{r}
+```{r include=FALSE}
 # Hypothese 3: Remote Working, Switch-off
 
 #cor.test(as.numeric(df$MA_GR), as.numeric(df$SOFF_GR), method = "pearson")
@@ -99,19 +104,22 @@ wenn berichten dann werte ausgeben lassen.
 
 cor.test(as.numeric(df$MA_GR), df$SOFF, method = "kendall")
 
+```
+<br>
 
+#### Hypothese 3:
+Je mehr Remote Working betrieben wird, desto schwieriger fällt der Switch-off.
 
-df %>% ggplot() + aes(x = MA_O, y = SOFF) + geom_jitter(alpha = 0.25, width = 0.2, height = 0.2) + geom_smooth(method = lm, color = "black") + cowplot::theme_half_open() + labs(x = "Zufriedenheit", y = "Switch-off", title = "Zufriedenheit und Switch-off korrelieren negativ.")
+Es gibt keinen signifikanten Zusammenhang zwischen Remote Working und Switch-off ($\tau=-0.054$, $p>0.05$) oder dieser konnte hier nicht festgestellt werden.
 
-  
-  
+![](images/korhyp3.PNG)
+
+```{r include=FALSE}
+df %>% ggplot() + aes(x = MA_O, y = SOFF) + geom_jitter(alpha = 0.25, width = 0.2, height = 0.2) + geom_smooth(method = lm, color = "black") + cowplot::theme_half_open() + scale_y_continuous(limits= c(1,6), breaks = 1:6) + labs(x = "Remote Working", y = "Switch-off", title = "Remote Working und Switch-off korrelieren nicht signifikant.")
 ```
 
-wahrscheinlich nehmen wir die ganze zeit Kendall. pearson wahrscheinlich überhaupt nicht
 
-
-
-```{r}
+```{r include=FALSE}
 # Hypothese 4: Flexibilität, Arbeitszufriedenheit
 
 
@@ -122,20 +130,26 @@ wahrscheinlich nehmen wir die ganze zeit Kendall. pearson wahrscheinlich überha
 #cor.test(df$FLEX, df$ZUFR, method = "spearman")
 cor.test(df$FLEX, df$ZUFR, method = "kendall")
 
+```
 
+<br>
 
+#### Hypothese 4
 
-df %>% ggplot() + aes(x = FLEX, y = ZUFR) + geom_point(alpha = 0.5) + geom_smooth(method = lm, color = "black") + cowplot::theme_half_open() + labs(x = "Zufriedenheit", y = "Switch-off", title = "Zufriedenheit und Switch-off korrelieren negativ.")
+Je flexibler die Arbeit eingeteilt werden kann, desto höher ist die Arbeitszufriedenheit.
 
+Es gibt einen positiven signifikanten Zusammenhang zwischen der Flexibilität der Arbeit und der Arbeitszufriedenheit ($\tau=0.241$, $p<0.001$). Die Arbeitszufriedenheit steigt, wenn die Arbeit flexibel eingeteilt werden kann.
 
+![](images/korhyp4.PNG)
 
+```{r include=FALSE}
+df %>% ggplot() + aes(x = FLEX, y = ZUFR) + geom_point(alpha = 0.5) + geom_smooth(method = lm, color = "black") + cowplot::theme_half_open() + scale_y_continuous(limits = c(1,6), breaks = 1:6) + labs(x = "Flexibilität der Arbeit", y = "Arbeitszufriedenheit", title = "Flexibilität der Arbeit und Arbeitszufriedenheit \n korrelieren positiv.")
 
 
 ```
 
 
-
-```{r}
+```{r include=FALSE}
 
 # Hypthese 5: Entfernung zur Arbeit, Switch-off
 
@@ -144,23 +158,92 @@ df %>% ggplot() + aes(x = FLEX, y = ZUFR) + geom_point(alpha = 0.5) + geom_smoot
 
 cor.test(as.numeric(df$EN_GR), df$SOFF, method = "kendall")
 
+```
+<br>
 
 
-df %>% ggplot() + aes(x = EN_GR, y = SOFF) + geom_jitter(alpha = 0.25, width = 0.2, height = 0.2) + geom_smooth(method = lm, color = "black") + cowplot::theme_half_open() + labs(x = "Zufriedenheit", y = "Switch-off", title = "Zufriedenheit und Switch-off korrelieren negativ.")
+#### Hypothese 5: 
+Je höher die Entfernung zur Arbeit, desto einfacher fällt der Switch-off.
+
+Es gibt keinen signifikanten Zusammenhang zwischen der Entfernung zur Arbeit und dem Switch-off ($\tau=-0.034$, $p>0.05$) oder dieser konnte hier nicht festgestellt werden.
+
+![](images/korhyp5.PNG)
+
+```{r include=FALSE}
+df %>% ggplot() + aes(x = EN_GR, y = SOFF) + geom_jitter(alpha = 0.25, width = 0.2, height = 0.2) + geom_smooth(method = lm, color = "black") + cowplot::theme_half_open() + scale_y_continuous(limits = c(1,6), breaks = 1:6) + labs(x = "Entfernung zur Arbeit", y = "Switch-off", title = "Entfernung zur Arbeit und Switch-off \n korrelieren nicht signifikant.")
+```
 
 
 
+<br>
+<br>
+
+## weitere induktive Korrelationen
+
+
+```{r include=FALSE}
+jmv::corrMatrix(df, c("age", "SOFF", "ZUFR", "FLEX", "AZZ", "AI", "AD"), kendall = TRUE, plots = TRUE, plotDens = TRUE, plotStats = TRUE)
+
+
+cor.test(df$ZUFR, df$AZZ, method = "kendall")
+
+cor.test(df$AI, df$SOFF, method = "kendall")
+
+cor.test(df$AI, df$AZZ, method = "kendall")
+```
+
+<br>
+
+#### induktive Korrelation 1
+Es gibt einen positiven signifikantenm Zusammenhang zwischen der Arbeitszufriedenheit und der Arbeitszeitenzufriedenheit ($\tau=0.357$, $p<0.001$). Die allgemeine Arbeitszufriedenheit steigt mir der Zufriedenheit bezüglich den Arbeitszeiten.
+
+![](images/indkor1.PNG)
+
+```{r include=FALSE}
+df %>% ggplot() + aes(x = ZUFR, y = AZZ) + geom_jitter(alpha = 0.25, width = 0.2, height = 0.2) + geom_smooth(method = lm, color = "black") + cowplot::theme_half_open() + scale_y_continuous(limits= c(1,6), breaks = 1:6) + labs(x = "Arbeitszufriedenheit", y = "Arbeitszeitenzufriedenheit", title = "Arbeitszufriedenheit und Arbeitszeitenzufriedenheit \n korrelieren positiv.")
+```
+
+<br>
+
+#### induktive Korrelation 2
+Es gibt einen signifikanten negativen Zusammenhang zwischen der Arbeitsintensität und dem Switch-off ($\tau=-0.33$, $p<0.001$). Je höher die Arbeitsintensität, desto schwieriger fällt der Switch-off.
+
+![](images/indkor2.PNG)
+
+```{r include=FALSE}
+df %>% ggplot() + aes(x = AI, y = SOFF) + geom_jitter(alpha = 0.25, width = 0.2, height = 0.2) + geom_smooth(method = lm, color = "black") + cowplot::theme_half_open() + scale_y_continuous(limits= c(1,6), breaks = 1:6) + scale_x_continuous(limits= c(1,6), breaks = 1:6) + labs(x = "Arbeitsintensität", y = "Switch-off", title = "Arbeitsintensität und Switch-off korrelieren negativ.")
+```
+
+<br>
+
+#### induktive Korrelation 3
+
+Es gibt einen signifikanten negativen Zusammenhang zwischen der Arbeitsintensität und der Arbeitszeitenzufriedenheit ($\tau=-0.281$, $p<0.001$). Je höher die Arbeitsintensität, desto geringer ist die Arbeitszeitenzufriedenheit.
+
+![](images/indkor3.PNG)
+
+```{r include=FALSE}
+df %>% ggplot() + aes(x = AI, y = AZZ) + geom_jitter(alpha = 0.25, width = 0.2, height = 0.2) + geom_smooth(method = lm, color = "black") + cowplot::theme_half_open() + scale_y_continuous(limits= c(1,6), breaks = 1:6) + scale_x_continuous(limits= c(1,6), breaks = 1:6) + labs(x = "Arbeitsintensität", y = "Arbeitszeitenzufriedenheit", title = "Arbeitsintensität und Arbeitszeitenzufriedenheit \n korrelieren negativ.")
 ```
 
 
 
 
+
+
+
+
+
+
+<br>
+<br>
+
 # Unterschiede
 
 
-```{r}
+```{r include=FALSE}
 
-print("Hypothese 1: Mitarbeiter, die mit ihren Arbeitszeiten zufrieden sind, weisen einen besseren Switch-Off auf.")
+("Hypothese 1: Mitarbeiter, die mit ihren Arbeitszeiten zufrieden sind, weisen einen besseren Switch-Off auf.")
 
 #einfacher t-test
 #t.test(as.numeric(df$SOFF_GR), mu=3.5)
@@ -203,16 +286,20 @@ df %>% ANOVA(dep = "SOFF", factors = c("AZZ_GR"))
 
              
              
-print("In der Stichprobe fällt Menschen, die mit ihren Arbeitszeiten zufrieden sind, der Switch Off leichter als Menschen, die mit ihren Arbeitszeiten unzufrieden sind. Dieser Unterschied ist signifikant. (t(41.54 = -2.407, P < .05) und liegt mit 95% Sicherheit zwischen 0.05 und 0.57 Punkten einer 6-stufigen Skala.")
+#("In der Stichprobe fällt Menschen, die mit ihren Arbeitszeiten zufrieden sind, der Switch Off leichter als Menschen, die mit ihren Arbeitszeiten unzufrieden sind. Dieser Unterschied ist signifikant. (t(41.54 = -2.407, P < .05) und liegt mit 95% Sicherheit zwischen 0.05 und 0.57 Punkten einer 6-stufigen Skala.")
 
 ```
-Es gibt einen signifikanten Unterschied zwischen der Arbeitszufriedenheit und dem Switch off (p < .001).
-Es gibt einen signifikanten Unterschied zwischen der Arbeitszeit und dem Switch off F(2) = 11.7, p < .001
+
+<br>
 
 
+#### Hypothese 1:
+
+Mitarbeiter, die mit ihren Arbeitszeiten zufrieden sind, weisen einen besseren Switch-off auf. Es gibt einen signifikanten Unterschied zwischen der Arbeitszufriedenheit und dem Switch off ($p<0.001$). Es gibt einen signifikanten Unterschied zwischen der Arbeitszeit und dem Switch off $F(2)=11.7$, $p<0.001$.
+In der Stichprobe fällt Menschen, die mit ihren Arbeitszeiten zufrieden sind, der Switch Off leichter als Menschen, die mit ihren Arbeitszeiten unzufrieden sind. Dieser Unterschied ist signifikant $(t(41.54=-2.407$, $p<0.05$) und liegt mit 95% Sicherheit zwischen 0.05 und 0.57 Punkten einer 6-stufigen Skala.
 
 
-```{r}
+```{r include=FALSE}
 ("Hypothese 2: Mitarbeiter mit geringerer Arbeitszeit (bis zu 29 Std. pro Woche) und geringerer Arbeitsintensität (keine Überstunden) weisen einen besseren Switch-Off auf.")
 
 
@@ -240,17 +327,18 @@ df %>% ANOVA(dep = "SOFF", factors = c("AZ_GR", "AI_GR"))
 
 ```
 
-Es gibt keinen signifikanten unterschied zwischen der Arbeitszeit und dem Switch off (p > .05). Anders ist es bei der Arbeitintensität und dem Switch off, hier gibt es einen signifikanten Unterschied (p < .001). 
-Betrachtet man Arbeitszeit und -intensität in Bezug auf den Switch off, gibt es wiederum keinen signifikanten Unterschied (p > .05).
+<br>
+
+#### Hypothese 2
+Mitarbeiter mit geringerer Arbeitszeit (bis zu 29 Std. pro Woche) und geringerer Arbeitsintensität (keine Überstunden) weisen einen besseren Switch-off auf.
+
+Es gibt keinen signifikanten unterschied zwischen der Arbeitszeit und dem Switch off ($p>0.05$). Anders ist es bei der Arbeitintensität und dem Switch off, hier gibt es einen signifikanten Unterschied ($p<0.001$). 
+Betrachtet man Arbeitszeit und -intensität in Bezug auf den Switch off, gibt es wiederum keinen signifikanten Unterschied ($p>0.05$).
 
 
+```{r include=FALSE}
 
-
-
-
-```{r}
-
-print("Hypothese 3: Mitarbeiter, die länger (über den Mediansplit der Arbeitsjahre) in der aktuellen Jobposition beschäftigt sind, weisen einen besseren Switch-Off auf.") 
+("Hypothese 3: Mitarbeiter, die länger (über den Mediansplit der Arbeitsjahre) in der aktuellen Jobposition beschäftigt sind, weisen einen besseren Switch-Off auf.") 
 
 #hilfestellung
 # t.test(filter(data,gender == "männlich")$KUT, filter(data, gender == "weiblich")$KUT)
@@ -265,12 +353,17 @@ print("Hypothese 3: Mitarbeiter, die länger (über den Mediansplit der Arbeitsj
 
 
 ```
+<br>
+
+#### Hypothese 3
+Mitarbeiter, die länger (über den Mediansplit der Arbeitsjahre) in der aktuellen Jobposition beschäftigt sind, weisen einen besseren Switch-off auf.
+
+Hypothese konnte nicht getestet werden.
 
 
+```{r include=F}
 
-```{r}
-
-print("Hypothese 4: Mitarbeiter, die den Großteil der Woche (drei oder mehr Tage) nicht am Arbeitsplatz arbeiten, weisen einen schlechteren Switch-Off auf.")
+("Hypothese 4: Mitarbeiter, die den Großteil der Woche (drei oder mehr Tage) nicht am Arbeitsplatz arbeiten, weisen einen schlechteren Switch-Off auf.")
 
 
 ### funktioniert noch nicht
@@ -286,9 +379,21 @@ print("Hypothese 4: Mitarbeiter, die den Großteil der Woche (drei oder mehr Tag
 
 ```
 
-```{r}
+<br>
 
-print("Hypothese 5: Mitarbeiter, die flexibel in ihrem Job sind, weisen einen besseren Switch-Off und eine höhere Arbeitszufriedenheit auf.")
+
+#### Hypothese 4:
+Mitarbeiter, die den Großteil der Woche (3 Tage oder mehr) nicht am Arbeitsplatz arbeiten, weisen einen schlechteren Switch-off auf.
+
+Hypothese konnte nicht getestet werden.
+
+
+
+
+
+```{r include=FALSE}
+
+("Hypothese 5: Mitarbeiter, die flexibel in ihrem Job sind, weisen einen besseren Switch-Off und eine höhere Arbeitszufriedenheit auf.")
 # One way Manova
 
 
@@ -303,6 +408,13 @@ mancova(df, deps = c("SOFF", "ZUFR"), factors = "FLEX")
 
 
 ```
-Es gibt keinen signifikaten Unterschied zwischen der Arbeitsintensität und dem Switch Off (p > 0.05).
-Anders ist es bei der Arbeitsflexibilität und der Arbeitszufriedenheit. Hier besteht ein signifikanter Unterschied (p < 0.001).
+
+<br>
+
+
+#### Hypothese 5:
+Mitarbeiter, die flexibel in ihrem Job sind, weisen einen besseren Switch-off und eine höhere Arbeitszufriedenheit auf.
+
+Es gibt keinen signifikaten Unterschied zwischen der Arbeitsintensität und dem Switch Off ($p>0.05$).
+Anders ist es bei der Arbeitsflexibilität und der Arbeitszufriedenheit. Hier besteht ein signifikanter Unterschied ($p<0.001$).
 

@@ -37,7 +37,7 @@ Die Faktoren, die uns im Team gemeinsam interessieren, sind die sozialen Interak
 
 #### Hypothese 1
 * Hypothese: Mitarbeiter, die mit ihren Arbeitszeiten zufrieden sind, weisen einen besseren _Switch-off_ auf.
-* Verfahren: T-Test
+* Verfahren: One-way Anova
 * H0: Mitarbeiter, die zufrieden mit ihren Arbeitszeiten sind und die, die unzufrieden mit ihren Arbeitszeiten sind, unterscheiden sich nicht im _Switch-off_.
 * H1: Mitarbeiter, die zufrieden mit ihren Arbeitszeiten sind und die, die unzufrieden mit ihren Arbeitszeiten sind, unterscheiden sich im _Switch-off_.
 
