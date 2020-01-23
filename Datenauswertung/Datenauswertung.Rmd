@@ -16,6 +16,23 @@ df <- readRDS("data.rds")
 ```
 
 
+```{r include=FALSE}
+
+# Stichprobenbeschreibung
+
+summary(df$age)
+table(df$age)
+
+summary(df$gender)
+
+df_remote <- filter(df, remote == "Ja")
+
+df %>% ggplot() + geom_histogram() + aes(x = age) + stat_bin(binwidth = 1) + cowplot::theme_half_open() + labs(x = "Alter", y = "Häufigkeit", title = "Bipolare Altersverteilung")
+
+
+```
+
+
 <br>
 
 # Unterschiede
