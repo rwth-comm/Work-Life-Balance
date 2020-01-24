@@ -16,6 +16,13 @@ df <- readRDS("data.rds")
 ```
 
 
+
+
+```{r}
+cor.test(df$SOFF, df$FLEX, method= "kendall")
+```
+
+
 ```{r include=FALSE}
 
 # Stichprobenbeschreibung
@@ -203,7 +210,20 @@ mancova(df, deps = c("SOFF", "ZUFR"), factors = "FLEX")
 
 
 
-
+df %>%
+  group_by(FLEX_GR) %>% 
+  summarise(mean_soff = mean(SOFF, na.rm = TRUE), mean_zufr = mean(ZUFR, na.rm = TRUE)) %>% 
+  pivot_longer(cols = c(mean_soff, mean_zufr), 
+               names_to = "AV", 
+               values_to = "value") %>% 
+  ggplot() +
+  aes(x = FLEX_GR, y = value, 
+      color = FLEX_GR, 
+      shape = AV, 
+      group = interaction(FLEX_GR, AV)) +
+  geom_point(size = 3) +
+  geom_line() +
+  scale_y_continuous(limits = c(3,5))
 
 ```
 
