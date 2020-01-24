@@ -233,9 +233,11 @@ df %>%
 #### Hypothese 5:
 Mitarbeiter, die flexibel in ihrem Job sind, weisen einen besseren Switch-off und eine höhere Arbeitszufriedenheit auf.
 
-Es gibt keinen signifikaten Unterschied zwischen der Arbeitsintensität und dem Switch Off ($p>0.05$).
-Anders ist es bei der Arbeitsflexibilität und der Arbeitszufriedenheit. Hier besteht ein signifikanter Unterschied ($p<0.001$).
 
+Es konnte kein signifikanter Unterschied zwischen Flexibilität der Arbeit und Switch-off festgestellt werden ($p>0.05$).
+Es besteht ein signifikanter Unterschied zwischen Flexibilität der Arbeit und Zufriedenheit ($p<0.001$). Probanden, die ihre Arbeitszeit flexibel bzw. sehr flexibel einteilen können, sind zufriedener als Probanden mit unflexibler Arbeitszeit.
+
+![](images/unthyp5.PNG)
 
 <br>
 <br>
